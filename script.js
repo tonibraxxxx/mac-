@@ -234,12 +234,12 @@ payBtn.addEventListener('click', () => {
     // In a real application, you would send this to your backend server
     // which would then interact with Safaricom's Daraja API.
 
-    paymentStatusDiv.textContent = `Initiating M-Pesa STK Push to ${mPesaNumber} for KSh ${totalAmount.toFixed(2)}. Please confirm on your phone.`;
+    paymentStatusDiv.textContent = `Simulating M-Pesa STK Push to ${mPesaNumber} for KSh ${totalAmount.toFixed(2)}. Please confirm on your phone.`;
     paymentStatusDiv.classList.add('success');
 
     // Simulate a successful payment after a few seconds
     setTimeout(() => {
-        paymentStatusDiv.textContent = `Payment for KSh ${totalAmount.toFixed(2)} to ${myMpesaNumber} confirmed! Thank you for shopping with Mama John!`;
+        paymentStatusDiv.textContent = `Payment of KSh ${totalAmount.toFixed(2)} confirmed! Please remember to send the money via M-Pesa to Mama John's number: ${myMpesaNumber}. Thank you for shopping!`;
         paymentStatusDiv.classList.add('success');
 
         // Clear cart after simulated success
