@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
   background: url('images/ugali-background.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -7,17 +7,26 @@ body {
 }
 
 header {
-  background: rgba(0, 0, 0, 0.7);
+  background: #bf1e2e;
   padding: 1em;
   text-align: center;
 }
 
 header h1 {
   margin: 0;
-  font-size: 1.8em;
-  background: linear-gradient(to right, #1db954, #ff69b4);
-  -webkit-background-clip: text;
-  color: transparent;
+  font-size: 2em;
+  color: white;
+  font-weight: bold;
+}
+
+#product-search {
+  margin-top: 10px;
+  padding: 8px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
 }
 
 main {
@@ -30,55 +39,60 @@ main {
 .product-grid {
   flex: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 1.2em;
 }
 
 .product {
-  border-radius: 12px;
+  background: white;
+  color: #111;
+  border-radius: 10px;
   padding: 1em;
   text-align: center;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  border: 3px solid #1db954;
 }
 
-.product:nth-child(1) { background: #ffc107; }  /* Cake */
-.product:nth-child(2) { background: #ff9800; }  /* Bread */
-.product:nth-child(3) { background: #00bcd4; }  /* Milk 500 */
-.product:nth-child(4) { background: #4caf50; }  /* Milk 250 */
-.product:nth-child(5) { background: #e91e63; }  /* Candy */
-.product:nth-child(6) { background: #f44336; }  /* Tomato */
-
 .product:hover {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .product-image {
   width: 100%;
-  height: 110px;
+  height: 120px;
   object-fit: cover;
   border-radius: 8px;
-  border: 2px solid white;
+}
+
+.product h3 {
+  margin: 0.5em 0 0.2em;
+  font-size: 1.1em;
+  color: #bf1e2e;
+}
+
+.product p {
+  margin: 0;
+  font-weight: bold;
 }
 
 .product button {
-  background-color: #fff;
-  color: #191414;
-  border: none;
-  padding: 0.5em 0.7em;
-  border-radius: 5px;
-  cursor: pointer;
   margin-top: 0.6em;
+  padding: 0.5em;
+  background-color: #1db954;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
   font-weight: bold;
 }
 
 #cart {
   flex: 1;
   padding: 1em;
-  background: rgba(0,0,0,0.75);
-  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
   color: white;
-  min-width: 250px;
 }
 
 #cart h2 {
@@ -92,7 +106,7 @@ main {
 
 #cart-items li {
   margin-bottom: 0.5em;
-  border-bottom: 1px dashed #1db954;
+  border-bottom: 1px dashed #ff69b4;
   padding-bottom: 4px;
 }
 
@@ -125,8 +139,6 @@ main {
 footer {
   text-align: center;
   padding: 1em;
-  background: #000000bb;
-  color: #bbb;
+  background: #000000cc;
+  color: #ccc;
 }
-ugali-background.jpg
-cake.jpg, bread.jpg, milk500.jpg, milk250.jpg, candy.jpg, tomato.jpg
